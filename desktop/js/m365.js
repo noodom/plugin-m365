@@ -30,8 +30,6 @@ $("body").delegate(".listCmdAction", 'click', function () {
     console.log('listCmdAction / click');
     var type = $(this).attr('data-type');
     var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
-    //var el = $(this).closest('.' + type).find('.cmdAttr[data-l1key=cmd][data-l2key=alerteAction]');
-    //var el = $(this).closest('.' + type).find('.cmdAttr[data-l1key=cmd][data-l2key=alerteAction]');
     jeedom.cmd.getSelectModal({
         cmd: {
             type: 'action'
@@ -43,20 +41,6 @@ $("body").delegate(".listCmdAction", 'click', function () {
         });
     });
 });
-
-/**$("body").delegate(".listCmdAction", 'click', function () {
-    console.log('gestion action alerte');
-    var type = $(this).attr('data-type');
-    var el = $(this).closest('.' + type).find('.cmdAttr[data-l1key=configuration][data-l2key=alerteAction]');
-    jeedom.cmd.getSelectModal({
-        cmd: {
-            type: 'action'
-        }
-    }, function (result) {
-        el.value(result.human);
-    });
-});
-**/
 
 $("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 /*
