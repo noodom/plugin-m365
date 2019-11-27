@@ -1,0 +1,11 @@
+{
+	"id" : "m365",
+	"name" : "Trottinette m365",
+	"description" : "Plugin pour récupérer les infos de la trottinette m365",
+	"licence" : "AGPL",
+	"author" : "noodom",
+	"require" : "3.2",
+	"category" : "monitoring",
+	"changelog" : "",
+	"documentation" : ""
+}
